@@ -69,8 +69,13 @@ public class JDBCUtils {
           e.printStackTrace();
       }
 
+    public static void closeResource1(Connection connection,Statement statement,ResultSet resultSet) {
+        DbUtils.closeQuietly(connection);
+        DbUtils.closeQuietly(statement);
+        DbUtils.closeQuietly(resultSet);
 
+    }
+  
   }
-
 
 }
